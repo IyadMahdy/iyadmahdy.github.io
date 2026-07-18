@@ -30,10 +30,6 @@
             .stat-tile { text-align: center; padding: 28px 16px; }
             .stat-num { font-size: 2rem; font-weight: 900; line-height: 1; }
             .stat-sub { font-size: .8rem; color: #6c757d; margin-top: 6px; }
-            .demo-placeholder {
-                border: 2px dashed #d7d9e3; border-radius: 1.5rem;
-                padding: 56px 24px; text-align: center; background: #fbfbfe;
-            }
             .repo-link-card {
                 display: flex; align-items: center; gap: 14px;
                 text-decoration: none; color: inherit;
@@ -178,21 +174,16 @@
                 </div>
             </section>
 
-            <!-- Demo placeholder -->
+            <!-- Demo video -->
             <section class="py-4">
                 <div class="container px-5">
                     <div class="row justify-content-center">
                         <div class="col-lg-11 col-xl-9 col-xxl-8">
                             <h2 class="fw-bolder mb-3">See it in action</h2>
-                            <div class="demo-placeholder">
-                                <i class="bi bi-play-circle text-gradient" style="font-size: 2.5rem;"></i>
-                                <div class="fw-bolder mt-3">Demo GIF coming soon</div>
-                                <div class="small text-muted mt-1" style="max-width: 480px; margin: 0 auto;">
-                                    A short screen recording of the upload → analysis → results flow goes here. Drop a file at
-                                    <code>assets/smartca-demo.gif</code> (or an .mp4) and swap this block for an
-                                    <code>&lt;img&gt;</code> or <code>&lt;video&gt;</code> tag pointing to it.
-                                </div>
+                            <div class="ratio ratio-16x9 rounded-4 overflow-hidden shadow">
+                                <iframe src="https://drive.google.com/file/d/1EywenUU-tDhBHHMl9I9ANCHxDHrYXOF4/preview" title="SmartCA demo — upload, analysis, and results walkthrough" allow="autoplay" allowfullscreen loading="lazy"></iframe>
                             </div>
+                            <div class="small text-muted mt-2">Walkthrough of the upload &rarr; analysis &rarr; results flow.</div>
                         </div>
                     </div>
                 </div>
