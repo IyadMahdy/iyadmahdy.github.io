@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-28T00:00:00Z",
+  "title": "Design System: Iyad Mahdy Portfolio (Line Map)",
+  "extensions": {
+    "colorMeta": {
+      "ink": { "role": "neutral", "displayName": "Signal Ink", "canonical": "#111418", "tonalRamp": ["#111418", "#2a2f36", "#444a52", "#5f6670", "#7e858e", "#a0a6ad", "#c6cacf", "#e8eaed"] },
+      "paper": { "role": "neutral", "displayName": "Sign Paper", "canonical": "#ffffff", "tonalRamp": ["#d9dbde", "#e3e5e7", "#eceef0", "#f1f2f4", "#f6f7f8", "#fafafb", "#fdfdfd", "#ffffff"] },
+      "mist": { "role": "neutral", "displayName": "Mist", "canonical": "#f1f2f4", "tonalRamp": ["#9a9ea5", "#b3b6bc", "#c8cacf", "#d9dbde", "#e5e7e9", "#eceef0", "#f1f2f4", "#f8f9fa"] },
+      "muted": { "role": "neutral", "displayName": "Muted Slate", "canonical": "#4a5058", "tonalRamp": ["#1f2328", "#2f343a", "#3c4249", "#4a5058", "#646a72", "#80858c", "#a3a7ad", "#cdd0d4"] },
+      "line-1-blue": { "role": "primary", "displayName": "Line 1 Blue", "canonical": "#0b4fd6", "tonalRamp": ["#04204f", "#072f80", "#0a3fb0", "#0b4fd6", "#3d74e0", "#6f98e8", "#a5bff0", "#d9e4f8"] },
+      "line-2-magenta": { "role": "secondary", "displayName": "Line 2 Magenta", "canonical": "#c4176f", "tonalRamp": ["#4d0a2b", "#7d0f46", "#a41360", "#c4176f", "#d4488e", "#e17bad", "#eeaecb", "#f9dde9"] },
+      "line-3-amber": { "role": "secondary", "displayName": "Line 3 Amber", "canonical": "#f2b200", "tonalRamp": ["#4d3900", "#7d5d00", "#b08200", "#f2b200", "#f5c43d", "#f8d575", "#fbe5a8", "#fdf4d9"] },
+      "line-4-green": { "role": "secondary", "displayName": "Line 4 Green", "canonical": "#007a4d", "tonalRamp": ["#00251a", "#003d28", "#005c3b", "#007a4d", "#2f9b72", "#68b996", "#a2d4bf", "#d8eee5"] }
+    },
+    "typographyMeta": {
+      "billboard": { "displayName": "Billboard", "purpose": "Hero name only; Archivo 900 at wdth 112." },
+      "headline": { "displayName": "Headline", "purpose": "Section titles and next-stop destination." },
+      "title": { "displayName": "Title", "purpose": "Line names." },
+      "body": { "displayName": "Body", "purpose": "Running copy at normal width." },
+      "label": { "displayName": "Label", "purpose": "Nav tabs, chips, station names." }
+    },
+    "shadows": [
+      { "name": "none", "value": "none", "purpose": "System is flat; Bootstrap shadow utilities are zeroed." },
+      { "name": "lit-ring", "value": "0 0 0 3px #fff, 0 0 0 7px var(--line)", "purpose": "Hard ring (no blur) around a numeral when a skill lights its line." }
+    ],
+    "motion": [
+      { "name": "station-draw", "value": "0.5s ease-out, 0.12s stagger per station", "purpose": "Route stroke draws in on scroll; paused until the line enters view." },
+      { "name": "sign-lift", "value": "transform 0.15s ease-out, translateY(-2px)", "purpose": "Sign button hover." },
+      { "name": "dim", "value": "opacity 0.25s, dimmed to 0.3", "purpose": "Unmatched lines when a skill is selected." }
+    ],
+    "breakpoints": [
+      { "name": "md", "value": "768px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Sign Button",
+      "kind": "button",
+      "refersTo": "sign-button-blue",
+      "description": "Primary call to action in a line colour with ink border.",
+      "html": "<a class=\"ds-sign ds-sign--1\" href=\"#\">Resume</a> <a class=\"ds-sign ds-sign--2\" href=\"#\">Projects</a> <a class=\"ds-sign ds-sign--3\" href=\"#\">Contact</a>",
+      "css": ".ds-sign { display:inline-flex; align-items:center; padding:0.8rem 1.4rem; border:2px solid var(--ink,#111418); border-radius:6px; font-weight:800; font-size:1.05rem; text-decoration:none; transition:transform 0.15s ease-out; } .ds-sign--1 { background:var(--l1,#0b4fd6); color:#fff; } .ds-sign--2 { background:var(--ink,#111418); color:#fff; } .ds-sign--3 { background:var(--l3,#f2b200); color:var(--ink,#111418); } .ds-sign:hover { transform:translateY(-2px); } .ds-sign:focus-visible { outline:3px solid var(--ink,#111418); outline-offset:3px; }"
+    },
+    {
+      "name": "Skill Chip",
+      "kind": "chip",
+      "refersTo": "skill-chip",
+      "description": "Toggle that lights every line using the skill.",
+      "html": "<button class=\"ds-chip\" aria-pressed=\"false\">RAG</button> <button class=\"ds-chip\" aria-pressed=\"true\">Python</button>",
+      "css": ".ds-chip { font:inherit; font-weight:700; font-size:0.95rem; border:2px solid var(--ink,#111418); background:#fff; color:var(--ink,#111418); border-radius:999px; padding:0.35rem 0.95rem; cursor:pointer; transition:background 0.15s,color 0.15s; } .ds-chip:hover { background:var(--mist,#f1f2f4); } .ds-chip[aria-pressed=\"true\"] { background:var(--ink,#111418); color:#fff; } .ds-chip:focus-visible { outline:3px solid var(--ink,#111418); outline-offset:3px; }"
+    },
+    {
+      "name": "Line Row with Stations",
+      "kind": "custom",
+      "refersTo": "line-numeral",
+      "description": "Numeral circle plus a stroke of stations, one per pipeline stage.",
+      "html": "<div class=\"ds-line\"><div class=\"ds-num\">1</div><div><h3 class=\"ds-name\">SmartCA</h3><ol class=\"ds-stations\"><li>Ingest</li><li>Embed</li><li>Retrieve</li><li>Answer</li></ol></div></div>",
+      "css": ".ds-line { --line:var(--l1,#0b4fd6); display:grid; grid-template-columns:auto 1fr; column-gap:1.25rem; padding-block:1.75rem; } .ds-num { width:4.5rem; aspect-ratio:1; border-radius:50%; background:var(--line); color:#fff; display:grid; place-items:center; font-weight:900; font-size:2.5rem; font-stretch:110%; } .ds-name { font-weight:900; font-size:1.5rem; margin:0; } .ds-stations { list-style:none; margin:1.25rem 0 0; padding:0; display:flex; } .ds-stations li { position:relative; flex:1 1 0; padding:1.6rem 0.5rem 0 0; font-size:0.9rem; font-weight:600; } .ds-stations li::before { content:\"\"; position:absolute; left:0; top:0; width:1.1rem; height:1.1rem; border-radius:50%; background:#fff; border:4px solid var(--line); z-index:1; } .ds-stations li::after { content:\"\"; position:absolute; left:1.1rem; right:0; top:0.4rem; height:0.3rem; background:var(--line); } .ds-stations li:last-child::after { display:none; } .ds-stations li:last-child::before { width:1.4rem; height:1.4rem; top:-0.15rem; border-width:5px; border-color:var(--ink,#111418); background:var(--line); }"
+    },
+    {
+      "name": "Panel Card",
+      "kind": "card",
+      "refersTo": "panel",
+      "description": "Flat white panel with 2px ink outline.",
+      "html": "<div class=\"ds-card\"><strong>Panel</strong><p>Flat, outlined, no shadow.</p></div>",
+      "css": ".ds-card { border:2px solid var(--ink,#111418); border-radius:8px; background:#fff; color:var(--ink,#111418); padding:1.25rem; } .ds-card p { margin:0.5rem 0 0; color:var(--muted,#4a5058); }"
+    },
+    {
+      "name": "Top Bar Navigation",
+      "kind": "nav",
+      "refersTo": "top-bar",
+      "description": "Ink bar with brand and tabs; active tab is inverted.",
+      "html": "<nav class=\"ds-bar\"><span class=\"ds-brand\">Iyad Mahdy</span><a href=\"#\" class=\"ds-tab ds-active\">Home</a><a href=\"#\" class=\"ds-tab\">Projects</a><a href=\"#\" class=\"ds-tab\">Resume</a></nav>",
+      "css": ".ds-bar { background:var(--ink,#111418); display:flex; align-items:center; gap:0.25rem; padding:0.75rem 1.5rem; } .ds-brand { color:#fff; font-weight:900; font-stretch:112%; font-size:1.25rem; margin-right:auto; } .ds-tab { color:#fff; font-weight:700; font-size:0.95rem; padding:0.4rem 0.9rem; border-radius:4px; text-decoration:none; } .ds-tab:hover { background:rgba(255,255,255,0.16); } .ds-tab.ds-active { background:#fff; color:var(--ink,#111418); } .ds-tab:focus-visible { outline:3px solid var(--l3,#f2b200); outline-offset:3px; }"
+    },
+    {
+      "name": "Next-stop Bar",
+      "kind": "custom",
+      "refersTo": "next-stop-bar",
+      "description": "Amber strip pointing to the next page.",
+      "html": "<div class=\"ds-next\"><a href=\"#\"><span>Next stop</span><strong>Contact</strong></a></div>",
+      "css": ".ds-next { background:var(--l3,#f2b200); border-top:2px solid var(--ink,#111418); } .ds-next a { display:flex; align-items:baseline; justify-content:space-between; gap:1rem; padding:1.5rem; text-decoration:none; color:var(--ink,#111418); } .ds-next span { font-weight:700; } .ds-next strong { font-size:2rem; font-weight:900; font-stretch:112%; } .ds-next a:hover strong { text-decoration:underline; text-decoration-thickness:4px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Line Map",
+    "overview": "Each AI system is a coloured route line and each pipeline stage is a station, read at a glance like station signage. The ground is a white sign panel, the bars are ink black, and every line owns one saturated colour: blue for SmartCA, magenta for Kidic, amber for Nexora, green for analysis work. The system stays recognisable with all copy removed, because the route strokes and station dots carry it.",
+    "keyCharacteristics": [
+      "White panels, ink bars, four line colours used as identity, not decoration.",
+      "2px ink borders with small radii (4 to 8px); no shadows, no gradients.",
+      "Archivo variable font: wide and heavy for signs, normal width for reading.",
+      "Line numerals as large filled circles; stations as ringed dots on a thick stroke.",
+      "One signature interaction: choosing a skill lights the lines that use it and dims the rest."
+    ],
+    "rules": [
+      { "name": "The One Line, One Colour Rule", "body": "A line colour identifies its system everywhere: numeral, stations, tags, inner-page heading badge. It is never reused as a generic accent for another system.", "section": "colors" },
+      { "name": "The Ink Text on Amber Rule", "body": "Amber fills carry ink text and ink numerals; amber never sets text on white.", "section": "colors" },
+      { "name": "The Wide Sign, Normal Text Rule", "body": "Widened font-stretch is reserved for sign-level text (names, titles, numerals, 404 code); running text stays at 100%.", "section": "typography" },
+      { "name": "The Flat Sign Rule", "body": "Surfaces are flat panels with ink outlines. State is shown by fill inversion, a ring, opacity (dim to 0.3) or a 2px lift on sign buttons, never by shadow.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do use the four line colours as system identity and keep one colour per system.",
+      "Do use 2px ink borders with 4, 6 or 8px radii on every panel, button and field.",
+      "Do pair amber fills with ink text and keep focus outlines at 3px with offset.",
+      "Do keep line colour as a CSS variable (--line) so numerals, stations and links inherit it.",
+      "Do respect reduced motion by disabling the station draw and the button lift."
+    ],
+    "donts": [
+      "Don't add shadows, gradients or glow; the template's gradient and shadow utilities are deliberately neutralised.",
+      "Don't set body text in widened or black Archivo, or use the wide cut outside sign-level text.",
+      "Don't use amber as text on white or any line colour for decoration unrelated to its system.",
+      "Don't use icon-card grids; the stage list, not icon tiles, is how process is shown."
+    ]
+  }
+}

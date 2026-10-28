@@ -4,6 +4,10 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="Case study: Smart Contract Analyzer (SmartCA) — a full-stack AI system that checks Arabic employment contracts against Egyptian Labor Law 14/2025 using OCR, RAG retrieval, and an LLM compliance engine. Built by Iyad Mahdy as part of a 6-person graduation project team." />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Smart Contract Analyzer — Case Study | Iyad Mahdy" />
+        <meta property="og:description" content="Case study: Smart Contract Analyzer (SmartCA) — a full-stack AI system that checks Arabic employment contracts against Egyptian Labor Law 14/2025 using OCR, RAG retrieval, and an LLM compliance engine. Built by Iyad Mahdy as part of a 6-person graduation project team." />
+        <meta property="og:image" content="https://iyadmahdy.github.io/assets/og.jpg" />
         <meta name="author" content="Iyad Mahdy" />
         <title>Smart Contract Analyzer — Case Study | Iyad Mahdy</title>
         <!-- Favicon-->
@@ -11,11 +15,12 @@
         <!-- Custom Google font-->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;display=swap" rel="stylesheet" />
         <!-- Bootstrap icons-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <link href="css/line.css" rel="stylesheet" />
         <style>
             /* Page-local additions — kept minimal, everything else reuses css/styles.css */
             .step-card { transition: transform .15s ease, box-shadow .15s ease; }
@@ -23,7 +28,7 @@
             .step-num {
                 position: absolute; top: -14px; left: 24px;
                 width: 28px; height: 28px; border-radius: 50%;
-                background: linear-gradient(135deg, #1e30f3 0%, #e21e80 100%);
+                background: linear-gradient(135deg, #1e30f3 0%, #c4176f 100%);
                 color: #fff; font-weight: 800; font-size: 13px;
                 display: flex; align-items: center; justify-content: center;
             }
@@ -36,23 +41,12 @@
             }
         </style>
     </head>
-    <body class="d-flex flex-column h-100 bg-light">
+    <body class="d-flex flex-column h-100 bg-light line-1">
+        <a class="skip-link" href="#main">Skip to content</a>
         <main class="flex-shrink-0">
             <!-- Navigation-->
-            <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
-                <div class="container px-5">
-                    <a class="navbar-brand" href="index.html"><span class="fw-bolder text-primary">Iyad Mahdy</span></a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
-                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
-                            <li class="nav-item"><a class="nav-link active" href="projects.html">Projects</a></li>
-                            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
+            <header class="site-bar"><nav class="navbar navbar-expand-lg navbar-dark"><div class="container px-4"><a class="navbar-brand" href="index.html">Iyad Mahdy</a><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" id="navbarSupportedContent"><ul class="navbar-nav ms-auto mb-2 mb-lg-0"><li class="nav-item"><a class="nav-link" href="index.html">Home</a></li><li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li><li class="nav-item"><a class="nav-link active" aria-current="page" href="projects.html">Projects</a></li><li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li></ul></div></div></nav></header>
+            <div id="main" tabindex="-1"></div>
 
             <!-- Hero -->
             <section class="py-5">
@@ -61,8 +55,8 @@
                         <div class="col-lg-11 col-xl-9 col-xxl-8">
                             <a href="projects.html" class="small fw-bolder text-decoration-none text-muted"><i class="bi bi-arrow-left me-1"></i>All Projects</a>
                             <div class="mt-4">
-                                <div class="badge bg-gradient-primary-to-secondary text-white mb-3"><div class="text-uppercase">Graduation Project &middot; Team of 6</div></div>
-                                <h1 class="display-5 fw-bolder mb-3"><span class="text-gradient d-inline">Smart Contract Analyzer</span></h1>
+                                <h1 data-line="1" class="display-5 fw-bolder mb-3"><span class="text-gradient d-inline">Smart Contract Analyzer</span></h1>
+                                <p class="line-meta">Graduation Project &middot; Team of 6</p>
                                 <p class="lead text-muted mb-4">A full-stack AI system that reads Arabic employment contracts and checks every clause against Egyptian Labor Law 14/2025 — combining OCR, retrieval-augmented legal search, and an LLM compliance engine with a dedicated hallucination-grounding step, behind a FastAPI backend and a Flutter mobile/desktop/web client.</p>
 
                                 <!-- Tech badges -->
@@ -107,68 +101,7 @@
                         <div class="col-lg-11 col-xl-9 col-xxl-8">
                             <h2 class="fw-bolder mb-2">How an analysis flows through the system</h2>
                             <p class="text-muted mb-4">Six stages run for every contract, from upload to a scored, citation-backed result back in the app.</p>
-                            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-                                <div class="col">
-                                    <div class="card step-card h-100 border-0 shadow-sm rounded-4 position-relative">
-                                        <div class="step-num">1</div>
-                                        <div class="card-body p-4">
-                                            <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 mb-3"><i class="bi bi-cloud-upload"></i></div>
-                                            <div class="fw-bolder mb-1">Upload</div>
-                                            <div class="small text-muted">Contract PDF/photo uploaded from the Flutter app; a Celery task picks it up asynchronously.</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="card step-card h-100 border-0 shadow-sm rounded-4 position-relative">
-                                        <div class="step-num">2</div>
-                                        <div class="card-body p-4">
-                                            <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 mb-3"><i class="bi bi-file-earmark-text"></i></div>
-                                            <div class="fw-bolder mb-1">OCR + clause split</div>
-                                            <div class="small text-muted">Azure Document Intelligence extracts Arabic text, which is normalized and parsed into individual clauses.</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="card step-card h-100 border-0 shadow-sm rounded-4 position-relative">
-                                        <div class="step-num">3</div>
-                                        <div class="card-body p-4">
-                                            <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 mb-3"><i class="bi bi-search"></i></div>
-                                            <div class="fw-bolder mb-1">Legal retrieval</div>
-                                            <div class="small text-muted">Each clause is matched against a 709-chunk indexed corpus of Law 14/2025 via FAISS + e5-base embeddings, then dual-gate filtered for relevance.</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="card step-card h-100 border-0 shadow-sm rounded-4 position-relative">
-                                        <div class="step-num">4</div>
-                                        <div class="card-body p-4">
-                                            <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 mb-3"><i class="bi bi-cpu"></i></div>
-                                            <div class="fw-bolder mb-1">LLM compliance check</div>
-                                            <div class="small text-muted">A Groq-hosted LLM reasons over the clause and its retrieved articles to assign a low/medium/high risk verdict with a cited article.</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="card step-card h-100 border-0 shadow-sm rounded-4 position-relative">
-                                        <div class="step-num">5</div>
-                                        <div class="card-body p-4">
-                                            <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 mb-3"><i class="bi bi-shield-check"></i></div>
-                                            <div class="fw-bolder mb-1">Grounding validator</div>
-                                            <div class="small text-muted">An anti-hallucination pass checks the LLM's claims are actually grounded in the cited law text before a verdict is accepted.</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="card step-card h-100 border-0 shadow-sm rounded-4 position-relative">
-                                        <div class="step-num">6</div>
-                                        <div class="card-body p-4">
-                                            <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 mb-3"><i class="bi bi-graph-up-arrow"></i></div>
-                                            <div class="fw-bolder mb-1">Compliance score</div>
-                                            <div class="small text-muted">Per-clause verdicts roll up into a compliance score and band, persisted to the DB and polled by the Flutter app.</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <ol class="stations stations--v stations--detail"><li style="--i:0"><strong>Upload</strong><span>Contract PDF/photo uploaded from the Flutter app; a Celery task picks it up asynchronously.</span></li><li style="--i:1"><strong>OCR + clause split</strong><span>Azure Document Intelligence extracts Arabic text, which is normalized and parsed into individual clauses.</span></li><li style="--i:2"><strong>Legal retrieval</strong><span>Each clause is matched against a 709-chunk indexed corpus of Law 14/2025 via FAISS + e5-base embeddings, then dual-gate filtered for relevance.</span></li><li style="--i:3"><strong>LLM compliance check</strong><span>A Groq-hosted LLM reasons over the clause and its retrieved articles to assign a low/medium/high risk verdict with a cited article.</span></li><li style="--i:4"><strong>Grounding validator</strong><span>An anti-hallucination pass checks the LLM's claims are actually grounded in the cited law text before a verdict is accepted.</span></li><li style="--i:5"><strong>Compliance score</strong><span>Per-clause verdicts roll up into a compliance score and band, persisted to the DB and polled by the Flutter app.</span></li></ol>
                         </div>
                     </div>
                 </div>
@@ -180,10 +113,10 @@
                     <div class="row justify-content-center">
                         <div class="col-lg-11 col-xl-9 col-xxl-8">
                             <h2 class="fw-bolder mb-3">See it in action</h2>
-                            <div class="ratio ratio-16x9 rounded-4 overflow-hidden shadow">
-                                <iframe src="https://drive.google.com/file/d/1EywenUU-tDhBHHMl9I9ANCHxDHrYXOF4/preview" title="SmartCA demo — upload, analysis, and results walkthrough" allow="autoplay" allowfullscreen loading="lazy"></iframe>
+                            <div class="demo-frame"><div class="ratio ratio-16x9 rounded-4 overflow-hidden shadow">
+                                <iframe src="https://drive.google.com/file/d/1EywenUU-tDhBHHMl9I9ANCHxDHrYXOF4/preview" title="SmartCA demo — upload, analysis, and results walkthrough" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe>
                             </div>
-                            <div class="small text-muted mt-2">Walkthrough of the upload &rarr; analysis &rarr; results flow.</div>
+                            <div class="small text-muted mt-2">Walkthrough of the upload &rarr; analysis &rarr; results flow. <a href="https://drive.google.com/file/d/1EywenUU-tDhBHHMl9I9ANCHxDHrYXOF4/view" target="_blank" rel="noopener noreferrer">Open the video in Google Drive</a> if the player looks wrong.</div></div>
                         </div>
                     </div>
                 </div>
@@ -301,20 +234,9 @@
             </section>
         </main>
         <!-- Footer-->
-        <footer class="bg-white py-4 mt-auto">
-            <div class="container px-5">
-                <div class="row align-items-center justify-content-between flex-column flex-sm-row">
-                    <div class="col-auto">
-                        <div class="small m-0">
-                        © 2026 Iyad Mahdy · Template by <a href="https://startbootstrap.com/theme/personal" target="_blank" rel="noopener noreferrer">Start Bootstrap</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
+        <aside class="next-stop"><div class="wrap"><a href="projects.html"><span>Next stop</span><strong>All projects &rarr;</strong></a></div></aside>
+        <footer class="site-foot"><div class="wrap"><span>&copy; 2026 Iyad Mahdy</span><span><a href="https://www.linkedin.com/in/IyadMahdy" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://www.github.com/IyadMahdy" target="_blank" rel="noopener noreferrer">GitHub</a></span></div></footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
     </body>
 </html>

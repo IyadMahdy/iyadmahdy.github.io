@@ -4,6 +4,10 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="Case study: Nexora, a FastAPI backend that turns a topic and target duration into a fully narrated MP4 through a single API call, orchestrating an LLM, TTS, word-level alignment, and a video generation model on GPU cloud infrastructure. Built solo by Iyad Mahdy." />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Nexora — AI Video Pipeline Case Study | Iyad Mahdy" />
+        <meta property="og:description" content="Case study: Nexora, a FastAPI backend that turns a topic and target duration into a fully narrated MP4 through a single API call, orchestrating an LLM, TTS, word-level alignment, and a video generation model on GPU cloud infrastructure. Built solo by Iyad Mahdy." />
+        <meta property="og:image" content="https://iyadmahdy.github.io/assets/og.jpg" />
         <meta name="author" content="Iyad Mahdy" />
         <title>Nexora — AI Video Pipeline Case Study | Iyad Mahdy</title>
         <!-- Favicon-->
@@ -11,11 +15,12 @@
         <!-- Custom Google font-->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;display=swap" rel="stylesheet" />
         <!-- Bootstrap icons-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <link href="css/line.css" rel="stylesheet" />
         <style>
             /* Page-local additions — kept minimal, everything else reuses css/styles.css */
             .step-card { transition: transform .15s ease, box-shadow .15s ease; }
@@ -23,38 +28,21 @@
             .step-num {
                 position: absolute; top: -14px; left: 24px;
                 width: 28px; height: 28px; border-radius: 50%;
-                background: linear-gradient(135deg, #1e30f3 0%, #e21e80 100%);
+                background: linear-gradient(135deg, #1e30f3 0%, #c4176f 100%);
                 color: #fff; font-weight: 800; font-size: 13px;
                 display: flex; align-items: center; justify-content: center;
             }
             .stat-tile { text-align: center; padding: 28px 16px; }
             .stat-num { font-size: 2rem; font-weight: 900; line-height: 1; }
             .stat-sub { font-size: .8rem; color: #6c757d; margin-top: 6px; }
-            .demo-placeholder {
-                display: flex; flex-direction: column; align-items: center; justify-content: center;
-                gap: 10px; color: #fff; text-align: center; padding: 40px 20px;
-                background: linear-gradient(135deg, #1e30f3 0%, #7a2fd6 50%, #e21e80 100%);
-            }
-            .demo-placeholder i { font-size: 2.5rem; opacity: .9; }
         </style>
     </head>
-    <body class="d-flex flex-column h-100 bg-light">
+    <body class="d-flex flex-column h-100 bg-light line-3">
+        <a class="skip-link" href="#main">Skip to content</a>
         <main class="flex-shrink-0">
             <!-- Navigation-->
-            <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
-                <div class="container px-5">
-                    <a class="navbar-brand" href="index.html"><span class="fw-bolder text-primary">Iyad Mahdy</span></a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
-                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
-                            <li class="nav-item"><a class="nav-link active" href="projects.html">Projects</a></li>
-                            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
+            <header class="site-bar"><nav class="navbar navbar-expand-lg navbar-dark"><div class="container px-4"><a class="navbar-brand" href="index.html">Iyad Mahdy</a><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" id="navbarSupportedContent"><ul class="navbar-nav ms-auto mb-2 mb-lg-0"><li class="nav-item"><a class="nav-link" href="index.html">Home</a></li><li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li><li class="nav-item"><a class="nav-link active" aria-current="page" href="projects.html">Projects</a></li><li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li></ul></div></div></nav></header>
+            <div id="main" tabindex="-1"></div>
 
             <!-- Hero -->
             <section class="py-5">
@@ -63,8 +51,8 @@
                         <div class="col-lg-11 col-xl-9 col-xxl-8">
                             <a href="projects.html" class="small fw-bolder text-decoration-none text-muted"><i class="bi bi-arrow-left me-1"></i>All Projects</a>
                             <div class="mt-4">
-                                <div class="badge bg-gradient-primary-to-secondary text-white mb-3"><div class="text-uppercase">AI Engineering Project &middot; Solo Build</div></div>
-                                <h1 class="display-5 fw-bolder mb-3"><span class="text-gradient d-inline">Nexora — AI Video Generation Pipeline</span></h1>
+                                <h1 data-line="3" class="display-5 fw-bolder mb-3"><span class="text-gradient d-inline">Nexora — AI Video Generation Pipeline</span></h1>
+                                <p class="line-meta">AI Engineering Project &middot; Solo Build</p>
                                 <p class="lead text-muted mb-4">A FastAPI backend that turns a topic and a target duration into a fully narrated MP4 through one HTTP call — orchestrating an LLM script writer, a TTS narrator, word-level audio alignment, and a video generation model into a finished, subtitled video on GPU cloud infrastructure.</p>
 
                                 <!-- Tech badges -->
@@ -107,103 +95,7 @@
                         <div class="col-lg-11 col-xl-9 col-xxl-8">
                             <h2 class="fw-bolder mb-2">How a video flows through the pipeline</h2>
                             <p class="text-muted mb-4">Seven stages run for every job, each persisting its output to disk so the pipeline is resumable and any stage range can be re-tested in isolation.</p>
-                            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-                                <div class="col">
-                                    <div class="card step-card h-100 border-0 shadow-sm rounded-4 position-relative">
-                                        <div class="step-num">1</div>
-                                        <div class="card-body p-4">
-                                            <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 mb-3"><i class="bi bi-pencil-square"></i></div>
-                                            <div class="fw-bolder mb-1">Script</div>
-                                            <div class="small text-muted">A Qwen LLM writes a narration script sized to the requested topic and target duration.</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="card step-card h-100 border-0 shadow-sm rounded-4 position-relative">
-                                        <div class="step-num">2</div>
-                                        <div class="card-body p-4">
-                                            <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 mb-3"><i class="bi bi-mic"></i></div>
-                                            <div class="fw-bolder mb-1">Narration</div>
-                                            <div class="small text-muted">Chatterbox TTS (ONNX Runtime, GPU) synthesizes the full script into one continuous narration WAV — no sentence-by-sentence stitching.</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="card step-card h-100 border-0 shadow-sm rounded-4 position-relative">
-                                        <div class="step-num">3</div>
-                                        <div class="card-body p-4">
-                                            <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 mb-3"><i class="bi bi-soundwave"></i></div>
-                                            <div class="fw-bolder mb-1">Alignment</div>
-                                            <div class="small text-muted">WhisperX re-transcribes the narration to produce word-level timestamps — the single timing authority for every downstream stage.</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="card step-card h-100 border-0 shadow-sm rounded-4 position-relative">
-                                        <div class="step-num">4</div>
-                                        <div class="card-body p-4">
-                                            <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 mb-3"><i class="bi bi-columns-gap"></i></div>
-                                            <div class="fw-bolder mb-1">Chunking</div>
-                                            <div class="small text-muted">The narration is split into 3–6 second semantic chunks along word boundaries — one chunk becomes one video clip.</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="card step-card h-100 border-0 shadow-sm rounded-4 position-relative">
-                                        <div class="step-num">5</div>
-                                        <div class="card-body p-4">
-                                            <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 mb-3"><i class="bi bi-stars"></i></div>
-                                            <div class="fw-bolder mb-1">Prompts</div>
-                                            <div class="small text-muted">Qwen generates a cinematic visual prompt per chunk, describing the shot the video model should generate.</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="card step-card h-100 border-0 shadow-sm rounded-4 position-relative">
-                                        <div class="step-num">6</div>
-                                        <div class="card-body p-4">
-                                            <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 mb-3"><i class="bi bi-camera-reels"></i></div>
-                                            <div class="fw-bolder mb-1">Video</div>
-                                            <div class="small text-muted">A distilled video generation model renders one clip per chunk, generated to match that chunk's exact duration.</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="card step-card h-100 border-0 shadow-sm rounded-4 position-relative">
-                                        <div class="step-num">7</div>
-                                        <div class="card-body p-4">
-                                            <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 mb-3"><i class="bi bi-film"></i></div>
-                                            <div class="fw-bolder mb-1">Render</div>
-                                            <div class="small text-muted">FFmpeg trims, concatenates, and muxes the clips with the narration and burned-in subtitles into the final MP4, duration-matched to within 1%.</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Demo video placeholder -->
-            <section class="py-4">
-                <div class="container px-5">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-11 col-xl-9 col-xxl-8">
-                            <h2 class="fw-bolder mb-3">See it in action</h2>
-                            <!--
-                                TODO: replace this placeholder with a real demo once a sample output is ready.
-                                Same pattern as the SmartCA case study — swap the div below for:
-                                <div class="ratio ratio-16x9 rounded-4 overflow-hidden shadow">
-                                    <iframe src="https://drive.google.com/file/d/FILE_ID/preview" title="Nexora demo — topic-to-video walkthrough" allow="autoplay" allowfullscreen loading="lazy"></iframe>
-                                </div>
-                            -->
-                            <div class="ratio ratio-16x9 rounded-4 overflow-hidden shadow demo-placeholder">
-                                <div>
-                                    <i class="bi bi-play-circle"></i>
-                                    <div class="fw-bolder">Sample output coming soon</div>
-                                    <div class="small opacity-75">A generated video walkthrough will be embedded here.</div>
-                                </div>
-                            </div>
+                            <ol class="stations stations--v stations--detail"><li style="--i:0"><strong>Script</strong><span>A Qwen LLM writes a narration script sized to the requested topic and target duration.</span></li><li style="--i:1"><strong>Narration</strong><span>Chatterbox TTS (ONNX Runtime, GPU) synthesizes the full script into one continuous narration WAV — no sentence-by-sentence stitching.</span></li><li style="--i:2"><strong>Alignment</strong><span>WhisperX re-transcribes the narration to produce word-level timestamps — the single timing authority for every downstream stage.</span></li><li style="--i:3"><strong>Chunking</strong><span>The narration is split into 3–6 second semantic chunks along word boundaries — one chunk becomes one video clip.</span></li><li style="--i:4"><strong>Prompts</strong><span>Qwen generates a cinematic visual prompt per chunk, describing the shot the video model should generate.</span></li><li style="--i:5"><strong>Video</strong><span>A distilled video generation model renders one clip per chunk, generated to match that chunk's exact duration.</span></li><li style="--i:6"><strong>Render</strong><span>FFmpeg trims, concatenates, and muxes the clips with the narration and burned-in subtitles into the final MP4, duration-matched to within 1%.</span></li></ol>
                         </div>
                     </div>
                 </div>
@@ -338,20 +230,9 @@
             </section>
         </main>
         <!-- Footer-->
-        <footer class="bg-white py-4 mt-auto">
-            <div class="container px-5">
-                <div class="row align-items-center justify-content-between flex-column flex-sm-row">
-                    <div class="col-auto">
-                        <div class="small m-0">
-                        © 2026 Iyad Mahdy · Template by <a href="https://startbootstrap.com/theme/personal" target="_blank" rel="noopener noreferrer">Start Bootstrap</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
+        <aside class="next-stop"><div class="wrap"><a href="projects.html"><span>Next stop</span><strong>All projects &rarr;</strong></a></div></aside>
+        <footer class="site-foot"><div class="wrap"><span>&copy; 2026 Iyad Mahdy</span><span><a href="https://www.linkedin.com/in/IyadMahdy" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://www.github.com/IyadMahdy" target="_blank" rel="noopener noreferrer">GitHub</a></span></div></footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
     </body>
 </html>

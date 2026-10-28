@@ -4,36 +4,30 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="Portfolio of Iyad Mahdy, Data Scientist and AI specialist. Showcasing projects in machine learning, NLP, and data analysis." />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Projects | Iyad Mahdy, Data Scientist" />
+        <meta property="og:description" content="Portfolio of Iyad Mahdy, Data Scientist and AI specialist. Showcasing projects in machine learning, NLP, and data analysis." />
+        <meta property="og:image" content="https://iyadmahdy.github.io/assets/og.jpg" />
         <meta name="author" content="Iyad Mahdy" />
-        <title>Iyad Mahdy | Data Scientist Portfolio</title>
+        <title>Projects | Iyad Mahdy, Data Scientist</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Custom Google font-->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;display=swap" rel="stylesheet" />
         <!-- Bootstrap icons-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <link href="css/line.css" rel="stylesheet" />
     </head>
     <body class="d-flex flex-column h-100 bg-light">
+        <a class="skip-link" href="#main">Skip to content</a>
         <main class="flex-shrink-0">
             <!-- Navigation-->
-            <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
-                <div class="container px-5">
-                    <a class="navbar-brand" href="index.html"><span class="fw-bolder text-primary">Iyad Mahdy</span></a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
-                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
-                            <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-                            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
+            <header class="site-bar"><nav class="navbar navbar-expand-lg navbar-dark"><div class="container px-4"><a class="navbar-brand" href="index.html">Iyad Mahdy</a><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" id="navbarSupportedContent"><ul class="navbar-nav ms-auto mb-2 mb-lg-0"><li class="nav-item"><a class="nav-link" href="index.html">Home</a></li><li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li><li class="nav-item"><a class="nav-link active" aria-current="page" href="projects.html">Projects</a></li><li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li></ul></div></div></nav></header>
+            <div id="main" tabindex="-1"></div>
             <!-- Projects Section-->
             <section class="py-5">
                 <div class="container px-5 mb-5">
@@ -47,10 +41,11 @@
                                 <div class="card-body p-0">
                                     <div class="d-flex align-items-center">
                                         <div class="p-5 flex-grow-1">
-                                            <div class="badge bg-gradient-primary-to-secondary text-white mb-2"><div class="text-uppercase small">Graduation Project</div></div>
+                                            
                                             <a href="smartca-case-study.html" class="text-decoration-none text-dark">
                                                 <h2 class="fw-bolder">Smart Contract Analyzer (SmartCA)</h2>
                                             </a>
+                                            <p class="line-meta" style="--line:var(--l1)">Line 1 &middot; Graduation Project</p>
                                             <p>Full-stack AI system (FastAPI + Celery backend, Flutter client) that OCRs Arabic employment contracts and checks each clause against Egyptian Labor Law 14/2025 using RAG retrieval and an LLM compliance engine with anti-hallucination grounding. Built with a 6-person team.</p>
 
                                             <!-- Tech Stack -->
@@ -61,9 +56,7 @@
 
                                             <a href="smartca-case-study.html" class="btn btn-sm btn-outline-primary mt-3 fw-bolder">View Case Study <i class="bi bi-arrow-right"></i></a>
                                         </div>
-                                        <a href="smartca-case-study.html" class="flex-shrink-0">
-                                            <img class="img-fluid d-none d-md-block" src="./assets/project4.jpg" alt="Smart Contract Analyzer pipeline diagram" style="max-width: 300px;" />
-                                        </a>
+                                        <div class="flex-shrink-0 d-none d-md-block pe-5" style="--line:var(--l1);min-width:15rem"><ol class="stations stations--v" aria-label="Pipeline stages"><li style="--i:0">Upload</li><li style="--i:1">OCR + clause split</li><li style="--i:2">Legal retrieval</li><li style="--i:3">LLM compliance check</li><li style="--i:4">Grounding validator</li><li style="--i:5">Compliance score</li></ol></div>
                                     </div>
                                 </div>
                             </div>
@@ -72,10 +65,11 @@
                                 <div class="card-body p-0">
                                     <div class="d-flex align-items-center">
                                         <div class="p-5 flex-grow-1">
-                                            <div class="badge bg-gradient-primary-to-secondary text-white mb-2"><div class="text-uppercase small">Internship Project</div></div>
+                                            
                                             <a href="kidic-chatbot-case-study.html" class="text-decoration-none text-dark">
                                                 <h2 class="fw-bolder">Kidic Parenting Assistant (RAG Chatbot)</h2>
                                             </a>
+                                            <p class="line-meta" style="--line:var(--l2)">Line 2 &middot; Internship Project</p>
                                             <p>Retrieval-augmented generation chatbot for Kidic, a parenting/childcare app — built solo during my AI engineering internship at EgronX. Answers pediatric/parenting questions grounded in a curated knowledge base, personalized to each child's profile, with conversational memory and "I don't know" safety guardrails.</p>
 
                                             <!-- Tech Stack -->
@@ -86,9 +80,7 @@
 
                                             <a href="kidic-chatbot-case-study.html" class="btn btn-sm btn-outline-primary mt-3 fw-bolder">View Case Study <i class="bi bi-arrow-right"></i></a>
                                         </div>
-                                        <a href="kidic-chatbot-case-study.html" class="flex-shrink-0">
-                                            <img class="img-fluid d-none d-md-block" src="./assets/kidic-pipeline.jpg" alt="Kidic Parenting Assistant RAG pipeline diagram" style="max-width: 300px;" />
-                                        </a>
+                                        <div class="flex-shrink-0 d-none d-md-block pe-5" style="--line:var(--l2);min-width:15rem"><ol class="stations stations--v" aria-label="Pipeline stages"><li style="--i:0">Parent asks a question</li><li style="--i:1">Rewrite with history</li><li style="--i:2">Retrieve knowledge</li><li style="--i:3">Personalize</li><li style="--i:4">Groq LLM answers</li><li style="--i:5">Session memory updates</li></ol></div>
                                     </div>
                                 </div>
                             </div>
@@ -97,10 +89,11 @@
                                 <div class="card-body p-0">
                                     <div class="d-flex align-items-center">
                                         <div class="p-5 flex-grow-1">
-                                            <div class="badge bg-gradient-primary-to-secondary text-white mb-2"><div class="text-uppercase small">Solo Project</div></div>
+                                            
                                             <a href="nexora-case-study.html" class="text-decoration-none text-dark">
                                                 <h2 class="fw-bolder">Nexora — AI Video Generation Pipeline</h2>
                                             </a>
+                                            <p class="line-meta" style="--line:var(--l3)">Line 3 &middot; Solo Project</p>
                                             <p>A FastAPI backend that turns a topic and a target duration into a fully narrated MP4 through a single API call — orchestrating an LLM script writer, TTS narration, word-level audio alignment, and a video generation model on GPU cloud infrastructure. Solo-built and deployed; 91 of its 92 commits are mine.</p>
 
                                             <!-- Tech Stack -->
@@ -111,9 +104,7 @@
 
                                             <a href="nexora-case-study.html" class="btn btn-sm btn-outline-primary mt-3 fw-bolder">View Case Study <i class="bi bi-arrow-right"></i></a>
                                         </div>
-                                        <a href="nexora-case-study.html" class="flex-shrink-0">
-                                            <img class="img-fluid d-none d-md-block" src="./assets/project5.jpg" alt="Nexora AI video generation pipeline diagram" style="max-width: 300px;" />
-                                        </a>
+                                        <div class="flex-shrink-0 d-none d-md-block pe-5" style="--line:var(--l3);min-width:15rem"><ol class="stations stations--v" aria-label="Pipeline stages"><li style="--i:0">Script</li><li style="--i:1">Narration</li><li style="--i:2">Alignment</li><li style="--i:3">Chunking</li><li style="--i:4">Prompts</li><li style="--i:5">Video</li><li style="--i:6">Render</li></ol></div>
                                     </div>
                                 </div>
                             </div>
@@ -122,9 +113,10 @@
                                 <div class="card-body p-0">
                                     <div class="d-flex align-items-center">
                                         <div class="p-5 flex-grow-1">
-                                            <a href="https://github.com/IyadMahdy/online-retail-customer-segmentation" target="_blank" class="text-decoration-none text-dark">
+                                            <a href="https://github.com/IyadMahdy/online-retail-customer-segmentation" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-dark">
                                                 <h2 class="fw-bolder">Customer Segmentation Analysis</h2>
                                             </a>
+                                            <p class="line-meta" style="--line:var(--l4)">Line 4 &middot; Analysis project</p>
                                             <p>Comprehensive customer segmentation analysis using machine learning clustering techniques to identify high-value and low-value customer groups.</p>
 
                                             <!-- Tech Stack -->
@@ -133,9 +125,6 @@
                                             <!-- Skills -->
                                             <p class="mb-1"><strong>Skills:</strong> Data Preprocessing, Data Visualization, EDA, Data Manipulation, Storytelling, Business Analysis</p>
                                         </div>
-                                        <a href="https://github.com/IyadMahdy/online-retail-customer-segmentation" target="_blank" class="flex-shrink-0">
-                                            <img class="img-fluid d-none d-md-block" src="./assets/project1.jpg" alt="Customer Segmentation Image" style="max-width: 300px;" />
-                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -144,9 +133,10 @@
                                 <div class="card-body p-0">
                                     <div class="d-flex align-items-center">
                                         <div class="p-5 flex-grow-1">
-                                            <a href="https://www.kaggle.com/code/iyadmahdy/a-b-testing-analysis-marketing-campaign" target="_blank" class="text-decoration-none text-dark">
+                                            <a href="https://www.kaggle.com/code/iyadmahdy/a-b-testing-analysis-marketing-campaign" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-dark">
                                                 <h2 class="fw-bolder">A/B and Hypothesis Testing for Marketing Campaign Analysis</h2>
                                             </a>
+                                            <p class="line-meta" style="--line:var(--l4)">Line 4 &middot; Analysis project</p>
                                             <p>I analyzed the effectiveness of two marketing campaigns using A/B testing to determine the most cost-efficient strategy. One campaign was a $50,000 test while the other was a $30,000 control, and I applied hypothesis testing to compare key metrics like user reach, conversion rates, and ROI.</p>
 
                                             <!-- Tech Stack -->
@@ -155,9 +145,6 @@
                                             <!-- Skills -->
                                             <p class="mb-1"><strong>Skills:</strong> A/B Testing, Hypothesis Testing, Storytelling, Data Analysis, Statistical Analysis, Business Analysis</p>
                                         </div>
-                                        <a href="https://www.kaggle.com/code/iyadmahdy/a-b-testing-analysis-marketing-campaign" target="_blank" class="flex-shrink-0">
-                                            <img class="img-fluid d-none d-md-block" src="./assets/project2.jpg" alt="A/B Testing Image" style="max-width: 300px;" />
-                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -166,9 +153,10 @@
                                 <div class="card-body p-0">
                                     <div class="d-flex align-items-center">
                                         <div class="p-5 flex-grow-1">
-                                            <a href="https://www.kaggle.com/code/iyadmahdy/identifying-key-features-for-diabetes-prediction" target="_blank" class="text-decoration-none text-dark">
+                                            <a href="https://www.kaggle.com/code/iyadmahdy/identifying-key-features-for-diabetes-prediction" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-dark">
                                                 <h2 class="fw-bolder">Optimizing Diabetes Prediction through Feature Selection</h2>
                                             </a>
+                                            <p class="line-meta" style="--line:var(--l4)">Line 4 &middot; Analysis project</p>
                                             <p>I worked on a Diabetes Prediction model, where I applied advanced statistical methods and data analysis techniques to optimize the model's performance. The focus was on feature selection to reduce the complexity of the dataset and improve prediction accuracy.</p>
 
                                             <!-- Tech Stack -->
@@ -177,9 +165,6 @@
                                             <!-- Skills -->
                                             <p class="mb-1"><strong>Skills:</strong> Feature Selection, Data Preprocessing, Data Visualization, EDA, Data Manipulation, Storytelling, Business Analysis</p>
                                         </div>
-                                        <a href="https://www.kaggle.com/code/iyadmahdy/identifying-key-features-for-diabetes-prediction" target="_blank" class="flex-shrink-0">
-                                            <img class="img-fluid d-none d-md-block" src="./assets/project3.jpg" alt="Diabetes Prediction Image" style="max-width: 300px;" />
-                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -198,27 +183,9 @@
             </section>
         </main>
         <!-- Footer-->
-        <footer class="bg-white py-4 mt-auto">
-            <div class="container px-5">
-                <div class="row align-items-center justify-content-between flex-column flex-sm-row">
-                    <div class="col-auto">
-                        <div class="small m-0">
-                        © 2026 Iyad Mahdy · Template by <a href="https://startbootstrap.com/theme/personal" target="_blank" rel="noopener noreferrer">Start Bootstrap</a>
-                        </div>
-                    </div>
-                    <!-- <div class="col-auto">
-                        <a class="small" href="#!">Privacy</a>
-                        <span class="mx-1">&middot;</span>
-                        <a class="small" href="#!">Terms</a>
-                        <span class="mx-1">&middot;</span>
-                        <a class="small" href="#!">Contact</a>
-                    </div> -->
-                </div>
-            </div>
-        </footer>
+        <aside class="next-stop"><div class="wrap"><a href="contact.html"><span>Next stop</span><strong>Contact &rarr;</strong></a></div></aside>
+        <footer class="site-foot"><div class="wrap"><span>&copy; 2026 Iyad Mahdy</span><span><a href="https://www.linkedin.com/in/IyadMahdy" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://www.github.com/IyadMahdy" target="_blank" rel="noopener noreferrer">GitHub</a></span></div></footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
     </body>
 </html>

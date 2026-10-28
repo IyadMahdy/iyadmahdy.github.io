@@ -4,6 +4,10 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="Case study: Kidic Parenting Assistant — a retrieval-augmented generation (RAG) chatbot for a parenting/childcare app, built solo by Iyad Mahdy during his AI engineering internship at EgronX." />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Kidic Parenting Assistant — Case Study | Iyad Mahdy" />
+        <meta property="og:description" content="Case study: Kidic Parenting Assistant — a retrieval-augmented generation (RAG) chatbot for a parenting/childcare app, built solo by Iyad Mahdy during his AI engineering internship at EgronX." />
+        <meta property="og:image" content="https://iyadmahdy.github.io/assets/og.jpg" />
         <meta name="author" content="Iyad Mahdy" />
         <title>Kidic Parenting Assistant — Case Study | Iyad Mahdy</title>
         <!-- Favicon-->
@@ -11,11 +15,12 @@
         <!-- Custom Google font-->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;display=swap" rel="stylesheet" />
         <!-- Bootstrap icons-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <link href="css/line.css" rel="stylesheet" />
         <style>
             /* Page-local additions — kept minimal, everything else reuses css/styles.css */
             .step-card { transition: transform .15s ease, box-shadow .15s ease; }
@@ -23,7 +28,7 @@
             .step-num {
                 position: absolute; top: -14px; left: 24px;
                 width: 28px; height: 28px; border-radius: 50%;
-                background: linear-gradient(135deg, #1e30f3 0%, #e21e80 100%);
+                background: linear-gradient(135deg, #1e30f3 0%, #c4176f 100%);
                 color: #fff; font-weight: 800; font-size: 13px;
                 display: flex; align-items: center; justify-content: center;
             }
@@ -32,23 +37,12 @@
             .stat-sub { font-size: .8rem; color: #6c757d; margin-top: 6px; }
         </style>
     </head>
-    <body class="d-flex flex-column h-100 bg-light">
+    <body class="d-flex flex-column h-100 bg-light line-2">
+        <a class="skip-link" href="#main">Skip to content</a>
         <main class="flex-shrink-0">
             <!-- Navigation-->
-            <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
-                <div class="container px-5">
-                    <a class="navbar-brand" href="index.html"><span class="fw-bolder text-primary">Iyad Mahdy</span></a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
-                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
-                            <li class="nav-item"><a class="nav-link active" href="projects.html">Projects</a></li>
-                            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
+            <header class="site-bar"><nav class="navbar navbar-expand-lg navbar-dark"><div class="container px-4"><a class="navbar-brand" href="index.html">Iyad Mahdy</a><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" id="navbarSupportedContent"><ul class="navbar-nav ms-auto mb-2 mb-lg-0"><li class="nav-item"><a class="nav-link" href="index.html">Home</a></li><li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li><li class="nav-item"><a class="nav-link active" aria-current="page" href="projects.html">Projects</a></li><li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li></ul></div></div></nav></header>
+            <div id="main" tabindex="-1"></div>
 
             <!-- Hero -->
             <section class="py-5">
@@ -57,8 +51,8 @@
                         <div class="col-lg-11 col-xl-9 col-xxl-8">
                             <a href="projects.html" class="small fw-bolder text-decoration-none text-muted"><i class="bi bi-arrow-left me-1"></i>All Projects</a>
                             <div class="mt-4">
-                                <div class="badge bg-gradient-primary-to-secondary text-white mb-3"><div class="text-uppercase">Internship Project &middot; Solo AI Build</div></div>
-                                <h1 class="display-5 fw-bolder mb-3"><span class="text-gradient d-inline">Kidic Parenting Assistant</span></h1>
+                                <h1 data-line="2" class="display-5 fw-bolder mb-3"><span class="text-gradient d-inline">Kidic Parenting Assistant</span></h1>
+                                <p class="line-meta">Internship Project &middot; Solo AI Build</p>
                                 <p class="lead text-muted mb-4">A retrieval-augmented generation (RAG) chatbot built for Kidic, a parenting/childcare app, during my AI engineering internship at EgronX. I owned every part of the AI stack alone — retrieval pipeline, LLM integration, conversational memory, per-child personalization, and deployment — while the rest of the team built the app's Spring Boot/Laravel backend.</p>
 
                                 <!-- Tech badges -->
@@ -103,81 +97,7 @@
                         <div class="col-lg-11 col-xl-9 col-xxl-8">
                             <h2 class="fw-bolder mb-2">How a question flows through the assistant</h2>
                             <p class="text-muted mb-4">Six stages run on every message, from the parent's question to a grounded, personalized reply.</p>
-                            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-                                <div class="col">
-                                    <div class="card step-card h-100 border-0 shadow-sm rounded-4 position-relative">
-                                        <div class="step-num">1</div>
-                                        <div class="card-body p-4">
-                                            <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 mb-3"><i class="bi bi-chat-dots"></i></div>
-                                            <div class="fw-bolder mb-1">Parent asks a question</div>
-                                            <div class="small text-muted">A message comes in through the chat API, tied to the parent's session.</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="card step-card h-100 border-0 shadow-sm rounded-4 position-relative">
-                                        <div class="step-num">2</div>
-                                        <div class="card-body p-4">
-                                            <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 mb-3"><i class="bi bi-arrow-repeat"></i></div>
-                                            <div class="fw-bolder mb-1">Rewrite with history</div>
-                                            <div class="small text-muted">A LangChain history-aware retriever rephrases follow-up questions into standalone queries using prior chat turns.</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="card step-card h-100 border-0 shadow-sm rounded-4 position-relative">
-                                        <div class="step-num">3</div>
-                                        <div class="card-body p-4">
-                                            <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 mb-3"><i class="bi bi-search"></i></div>
-                                            <div class="fw-bolder mb-1">Retrieve knowledge</div>
-                                            <div class="small text-muted">The query is embedded and matched against a curated pediatric/parenting corpus in a Qdrant vector collection.</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="card step-card h-100 border-0 shadow-sm rounded-4 position-relative">
-                                        <div class="step-num">4</div>
-                                        <div class="card-body p-4">
-                                            <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 mb-3"><i class="bi bi-heart"></i></div>
-                                            <div class="fw-bolder mb-1">Personalize</div>
-                                            <div class="small text-muted">The child's profile — age, allergies, medical notes — is pulled and injected into the prompt alongside the retrieved context.</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="card step-card h-100 border-0 shadow-sm rounded-4 position-relative">
-                                        <div class="step-num">5</div>
-                                        <div class="card-body p-4">
-                                            <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 mb-3"><i class="bi bi-cpu"></i></div>
-                                            <div class="fw-bolder mb-1">Groq LLM answers</div>
-                                            <div class="small text-muted">A Groq-hosted Qwen3-32B model generates a concise, empathetic reply grounded in the retrieved context — or admits it doesn't know.</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="card step-card h-100 border-0 shadow-sm rounded-4 position-relative">
-                                        <div class="step-num">6</div>
-                                        <div class="card-body p-4">
-                                            <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 mb-3"><i class="bi bi-clock-history"></i></div>
-                                            <div class="fw-bolder mb-1">Session memory updates</div>
-                                            <div class="small text-muted">The exchange is saved to a trimmed per-user history (last 3 turns) so the next question has context.</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Pipeline diagram -->
-            <section class="py-4">
-                <div class="container px-5">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-11 col-xl-9 col-xxl-8">
-                            <div class="rounded-4 overflow-hidden shadow">
-                                <img class="img-fluid w-100 d-block" src="assets/kidic-pipeline.jpg" alt="Kidic Parenting Assistant RAG pipeline diagram" />
-                            </div>
+                            <ol class="stations stations--v stations--detail"><li style="--i:0"><strong>Parent asks a question</strong><span>A message comes in through the chat API, tied to the parent's session.</span></li><li style="--i:1"><strong>Rewrite with history</strong><span>A LangChain history-aware retriever rephrases follow-up questions into standalone queries using prior chat turns.</span></li><li style="--i:2"><strong>Retrieve knowledge</strong><span>The query is embedded and matched against a curated pediatric/parenting corpus in a Qdrant vector collection.</span></li><li style="--i:3"><strong>Personalize</strong><span>The child's profile — age, allergies, medical notes — is pulled and injected into the prompt alongside the retrieved context.</span></li><li style="--i:4"><strong>Groq LLM answers</strong><span>A Groq-hosted Qwen3-32B model generates a concise, empathetic reply grounded in the retrieved context — or admits it doesn't know.</span></li><li style="--i:5"><strong>Session memory updates</strong><span>The exchange is saved to a trimmed per-user history (last 3 turns) so the next question has context.</span></li></ol>
                         </div>
                     </div>
                 </div>
@@ -311,20 +231,9 @@
             </section>
         </main>
         <!-- Footer-->
-        <footer class="bg-white py-4 mt-auto">
-            <div class="container px-5">
-                <div class="row align-items-center justify-content-between flex-column flex-sm-row">
-                    <div class="col-auto">
-                        <div class="small m-0">
-                        © 2026 Iyad Mahdy · Template by <a href="https://startbootstrap.com/theme/personal" target="_blank" rel="noopener noreferrer">Start Bootstrap</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
+        <aside class="next-stop"><div class="wrap"><a href="projects.html"><span>Next stop</span><strong>All projects &rarr;</strong></a></div></aside>
+        <footer class="site-foot"><div class="wrap"><span>&copy; 2026 Iyad Mahdy</span><span><a href="https://www.linkedin.com/in/IyadMahdy" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://www.github.com/IyadMahdy" target="_blank" rel="noopener noreferrer">GitHub</a></span></div></footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
     </body>
 </html>
